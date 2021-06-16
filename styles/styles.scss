@@ -1,0 +1,93 @@
+@import "config";
+
+html {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: color(primary-SoftRed);
+    min-height: 100%;
+}
+
+p,
+h1,
+h2,
+h3 {
+    margin-top: 1em;
+}
+
+.structure-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100vh auto auto auto 250px;
+}
+
+.header {
+    background: url("/images/desktop/image-header.jpg") no-repeat;
+    background-size: cover;
+
+    nav {
+        height: 75px;
+        background: white;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1em;
+
+        ul {
+            display: flex;
+
+            li {
+                list-style: none;
+            }
+        }
+    }
+}
+
+.margin {
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.inner-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 700px);
+    gap: 0.25em;
+
+    .img {
+        background: yellow;
+    }
+
+    .full-img {
+        background: turquoise;
+    }
+}
+
+.grid-items {
+    background: pink;
+}
+
+.testimonial {
+    height: 700px;
+    background: green;
+}
+
+.gallery {
+    height: 350px;
+    background: orange;
+}
+
+.footer {
+    background: yellow;
+}
