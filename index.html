@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap" rel="stylesheet"> 
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,700;1,900&display=swap" rel="stylesheet"> 
   <link rel="stylesheet" href="./css/styles.css">
   
   <title>Frontend Mentor | Sunnyside agency landing page</title>
@@ -18,7 +22,7 @@
 <body>
 
   <div class="structure-container">
-    <div class="header">
+    <header class="header">
       <nav>
         <h2>LOGO</h2>
         <ul>
@@ -27,38 +31,60 @@
           <li>link</li>
         </ul>
       </nav>
-    </div>
-    <div class="inner-grid">
-      <div class="grid-items"></div>
-      <div class="grid-items img"></div>
-      <div class="grid-items img"></div>
-      <div class="grid-items"></div>
-      <div class="grid-items full-img"></div>
-      <div class="grid-items full-img"></div>
-    </div>
-    <div class="testimonial"></div>
-    <div class="gallery"></div>
-    <div class="footer"></div>
+      <div class="header__intro">
+        <div class="intro--wrap">
+          <h1>WE ARE CREATIVES</h1>
+          <img src="/images/icon-arrow-down.svg" />
+
+        </div>
+      </div>
+    </header>
+    <!-- inner grid -->
+    <section class="inner-grid">
+      <div class="grid-items item1">
+        <div class="item--wrap">
+          <h2>Transform your brand</h2>
+          <p>We are a full-service creative agency specializing in helping brands grow fast. 
+            Engage your clients through compelling visuals that do most of the marketing for you.</p>
+          <a href="#">Learn more</a>
+        </div>
+      </div>
+      <img src="/images/desktop/image-transform.jpg" class="grid-items img egg"></img>
+      <img src="/images/desktop/image-stand-out.jpg" class="grid-items img smoothie"></img>
+      <div class="grid-items item2">
+        <div class="item--wrap">
+          <h2>Stand out to the right audience</h2>
+          <p>Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places.</p>
+          <a href="#">Learn more</a>
+        </div>
+      </div>
+      <img src="/images/desktop/image-graphic-design.jpg" class="grid-items full-img cherry"></img>
+      <img src="/images/desktop/image-photography.jpg" class="grid-items full-img orange"></img>
+    </section>
+    <!-- testimonials -->
+    <section class="testimonial"></section>
+    <!-- gallery -->
+    <section class="gallery"></section>
+    <!-- footer -->
+    <footer class="footer"></footer>
   </div>
   <!-- About
   Services
   Projects
   Contact
 
-  We are creatives
+  
+  
 
-  Transform your brand
+  
 
-  We are a full-service creative agency specializing in helping brands grow fast. 
-  Engage your clients through compelling visuals that do most of the marketing for you.
 
-  Learn more
 
-  Stand out to the right audience
+  
 
-  Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places. 
+   
 
-  Learn more
+
 
   Graphic design
   Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.
