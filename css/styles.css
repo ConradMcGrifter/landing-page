@@ -127,8 +127,8 @@ p {
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
-  -ms-grid-rows: (minmax(1fr, 800px))[3];
-      grid-template-rows: repeat(3, minmax(1fr, 800px));
+  -ms-grid-rows: (1fr)[3];
+      grid-template-rows: repeat(3, 1fr);
 }
 
 .inner-grid .egg,
