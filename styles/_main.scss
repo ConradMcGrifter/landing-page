@@ -1,0 +1,109 @@
+.grid-container {
+    width: 100%;
+    height: 2000px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(6, 1fr);
+
+    a {
+        margin-top: 1em;
+        display: block;
+        text-decoration: none;
+        font-family: "Fraunces";
+        font-weight: 900;
+        position: relative;
+        z-index: 2;
+        font-size: 1.8rem;
+        width: max-content;
+        color: black;
+
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: -2px;
+            left: -7px;
+            width: 110%;
+            height: 12px;
+
+            background: hsla(51, 100%, 49%, 0.26);
+            border-radius: 999px;
+
+            z-index: -1;
+        }
+
+        &:hover::before {
+            background: color(primary-Yellow);
+        }
+    }
+}
+
+.a,
+.d {
+    grid-row: span 2;
+    background: white;
+    padding: 1em;
+    @include flexCenter(column);
+    .wrap {
+        max-width: 45ch;
+
+        h2 {
+            font-size: 4rem;
+            max-width: 16ch;
+        }
+    }
+}
+.b {
+    grid-row: span 2;
+    background: url("/images/desktop/image-transform.jpg") center;
+    background-size: cover;
+}
+
+.c,
+.d,
+.e,
+.f {
+    grid-row: span 2;
+}
+
+.e,
+.f {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    text-align: center;
+    padding: 0 0 4em 0;
+
+    .wrap {
+        max-width: 37ch;
+
+        h2 {
+            font-size: 3.2rem;
+            font-weight: 900;
+        }
+
+        .e__h2,
+        .e__p {
+            color: color(graphicDesignText);
+        }
+
+        .f__h2,
+        .f__p {
+            color: color(photographyText);
+        }
+    }
+}
+
+.c {
+    background: url("/images/desktop/image-stand-out.jpg") center;
+    background-size: cover;
+}
+
+.e {
+    background: url("/images/desktop/image-graphic-design.jpg") top no-repeat;
+    background-size: cover;
+}
+
+.f {
+    background: url("/images/desktop/image-photography.jpg") top no-repeat;
+    background-size: cover;
+}
