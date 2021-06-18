@@ -93,6 +93,7 @@ p {
         img {
             margin-top: 5em;
             width: 45px;
+            animation: upDown 1.5s infinite ease-in-out alternate;
         }
     }
 }
@@ -112,4 +113,13 @@ p {
 
 .footer {
     background: yellow;
+}
+
+@keyframes upDown {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(35px);
+    }
 }

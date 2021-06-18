@@ -1,4 +1,4 @@
-.about--container {
+.main--container {
   width: 100%;
   display: -ms-grid;
   display: grid;
@@ -8,7 +8,7 @@
       grid-template-rows: repeat(6, 1fr);
 }
 
-.about--container a {
+.main--container a {
   margin-top: 1em;
   display: block;
   text-decoration: none;
@@ -23,7 +23,7 @@
   color: black;
 }
 
-.about--container a::before {
+.main--container a::before {
   content: "";
   position: absolute;
   bottom: -2px;
@@ -35,7 +35,7 @@
   z-index: -1;
 }
 
-.about--container a:hover::before {
+.main--container a:hover::before {
   background: #fad400;
 }
 
@@ -285,6 +285,8 @@ p {
 .header .intro--wrap img {
   margin-top: 5em;
   width: 45px;
+  -webkit-animation: upDown 1.5s infinite ease-in-out alternate;
+          animation: upDown 1.5s infinite ease-in-out alternate;
 }
 
 .margin {
@@ -302,5 +304,27 @@ p {
 
 .footer {
   background: yellow;
+}
+
+@-webkit-keyframes upDown {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  to {
+    -webkit-transform: translateY(35px);
+            transform: translateY(35px);
+  }
+}
+
+@keyframes upDown {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  to {
+    -webkit-transform: translateY(35px);
+            transform: translateY(35px);
+  }
 }
 /*# sourceMappingURL=styles.css.map */
