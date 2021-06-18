@@ -1,6 +1,6 @@
-.grid-container {
+.about--container {
     width: 100%;
-    // max-height: 2500px;
+
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(6, 1fr);
@@ -37,8 +37,8 @@
     }
 }
 
-.a,
-.d {
+.transform-brand,
+.stand-out {
     grid-row: span 2;
     background: white;
     padding: 1em;
@@ -56,16 +56,15 @@
         }
     }
 }
-
-.c,
-.d,
-.e,
-.f {
+.egg,
+.smoothie,
+.graphic-cherry,
+.photography-orange {
     grid-row: span 2;
 }
 
-.e,
-.f {
+.graphic-cherry,
+.photography-orange {
     display: flex;
     align-items: flex-end;
     justify-content: center;
@@ -89,21 +88,20 @@
             font-size: 1.8rem;
         }
 
-        .e__h2,
-        .e__p {
+        .graphic-cherry__h2,
+        .graphic-cherry__p {
             color: color(graphicDesignText);
         }
 
-        .f__h2,
-        .f__p {
+        .photography-orange__h2,
+        .photography-orange__p {
             color: color(photographyText);
         }
     }
 }
 
 // egg
-.b {
-    grid-row: span 2;
+.egg {
     // background: url("/images/desktop/image-transform.jpg") center;
     // background-size: cover;
 
@@ -115,7 +113,7 @@
 }
 
 // smoothie
-.c {
+.smoothie {
     // background: url("/images/desktop/image-stand-out.jpg") center;
     // background-size: cover;
 
@@ -127,7 +125,7 @@
 }
 
 // cherry
-.e {
+.graphic-cherry {
     // background: url("/images/desktop/image-graphic-design.jpg") top no-repeat;
     // background-size: cover;
     img {
@@ -139,7 +137,7 @@
 }
 
 // orange
-.f {
+.photography-orange {
     // background: url("/images/desktop/image-photography.jpg") top no-repeat;
     // background-size: cover;
     img {
