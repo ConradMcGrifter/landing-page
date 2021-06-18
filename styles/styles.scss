@@ -50,9 +50,10 @@ p {
     background-size: cover;
 
     nav {
-        height: 100px;
+        min-height: 100px;
         // background: white;
         display: flex;
+        flex-wrap: wrap;
         width: 100%;
         justify-content: space-between;
         align-items: center;
@@ -60,6 +61,19 @@ p {
 
         img {
             width: 200px;
+
+            @include mobileSize {
+                width: auto;
+            }
+        }
+
+        .hamburger {
+            display: none;
+
+            @include mobileSize {
+                display: block;
+                cursor: pointer;
+            }
         }
 
         ul {
@@ -67,6 +81,18 @@ p {
 
             li {
                 list-style: none;
+            }
+        }
+
+        @include mobileSize {
+            ul {
+                display: none;
+                width: 100%;
+                justify-content: flex-end;
+            }
+
+            ul.display {
+                display: flex;
             }
         }
     }
@@ -82,12 +108,21 @@ p {
         @include flexCenter(column);
         padding: 5em;
 
+        @include mobileSize {
+            padding: 2em;
+        }
+
         h1 {
             letter-spacing: 0.15em;
             font-size: 6rem;
             // margin-top: 1.5em;
             color: white;
             font-weight: 900;
+
+            @include mobileSize {
+                font-size: 3.2rem;
+                text-align: center;
+            }
         }
 
         img {

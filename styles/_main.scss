@@ -3,11 +3,23 @@
 
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(6, 1fr);
+    grid-auto-rows: 1fr;
+
+    @include mobileSize {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1.5fr 1fr 1.5fr 1.5fr 1.5fr;
+        grid-template-areas:
+            "egg"
+            "transform"
+            "smoothie"
+            "stand-out"
+            "cherry"
+            "orange";
+    }
 
     a {
         margin-top: 1em;
-        display: block;
+        display: inline-block;
         text-decoration: none;
         font-family: "Fraunces";
         font-weight: 900;
@@ -39,7 +51,7 @@
 
 .transform-brand,
 .stand-out {
-    grid-row: span 2;
+    // grid-row: span 2;
     background: white;
     padding: 1em;
     @include flexCenter(column);
@@ -49,18 +61,44 @@
         h2 {
             font-size: 4rem;
             max-width: 20ch;
+
+            @include mobileSize {
+                font-size: 3.5rem;
+            }
         }
 
         p {
             color: color(neutral-darkGrayish-blue);
+
+            @include mobileSize {
+                font-size: 1.6rem;
+            }
+        }
+
+        @include mobileSize {
+            text-align: center;
         }
     }
+
+    // @include mobileSize {
+    //     grid-row: unset;
+    // }
 }
 .egg,
 .smoothie,
 .graphic-cherry,
 .photography-orange {
-    grid-row: span 2;
+    // grid-row: span 2;
+
+    // @include mobileSize {
+    //     grid-row: unset;
+    // }
+}
+
+.egg {
+    @include mobileSize {
+        grid-area: egg;
+    }
 }
 
 .graphic-cherry,
@@ -74,6 +112,7 @@
 
     // this wraps the text for the bottom two images of the grid
     .wrap {
+        padding: 0 0.5em;
         max-width: 37ch;
         position: absolute;
         bottom: 10%;
@@ -82,10 +121,18 @@
         h2 {
             font-size: 2.8rem;
             font-weight: 900;
+
+            @include mobileSize {
+                font-size: 2.2rem;
+            }
         }
 
         p {
             font-size: 1.8rem;
+
+            @include mobileSize {
+                font-size: 1.6rem;
+            }
         }
 
         .graphic-cherry__h2,
