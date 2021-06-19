@@ -111,6 +111,7 @@ p {
                 background: color(white);
                 transition: top 1s, opacity 0.5s;
                 opacity: 0;
+                padding: 1em;
 
                 &.display {
                     visibility: visible;
@@ -121,11 +122,45 @@ p {
                 }
             }
 
+            .margin {
+                margin-left: 1.5em;
+                margin-right: 1.5em;
+
+                @include mobileSize {
+                    margin-left: 0;
+                    margin-right: 0;
+                }
+            }
+
             li {
                 list-style: none;
 
                 @include mobileSize {
                     padding: 1em;
+                }
+
+                a {
+                    text-decoration: none;
+                    color: color(white);
+
+                    @include mobileSize {
+                        color: color(neutral-grayish-blue);
+                    }
+                }
+
+                .contact-btn {
+                    color: black;
+                    background: color(white);
+                    padding: 0.75em 1.25em;
+                    border-radius: 999px;
+                    font-family: "Fraunces", Arial;
+                    font-weight: 700;
+                    margin-left: 2em;
+                    font-size: 1.6rem;
+                    @include mobileSize {
+                        background: color(primary-Yellow);
+                        margin: 0;
+                    }
                 }
             }
 
@@ -187,18 +222,39 @@ p {
     }
 }
 
-.margin {
-    margin-left: 1em;
-    margin-right: 1em;
+.testimonial--container {
+    background: color(white);
+    @include flexCenter(column);
 
-    @include mobileSize {
-        margin-left: 0;
-        margin-right: 0;
+    .client-testimonials--wrap {
+        @include flexCenter(row);
+        width: 75%;
+        outline: solid black 2px;
+        text-align: center;
+        @include mobileSize {
+            flex-wrap: wrap;
+        }
     }
-}
 
-.testimonial {
-    background: green;
+    .testimonial {
+        height: 100%;
+        outline: solid red 2px;
+        padding: 1em 2em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+
+        img {
+            width: 100px;
+            height: 100px;
+            border-radius: 999px;
+        }
+    }
+
+    .testimonial__name--wrap {
+        outline: solid green 2px;
+    }
 }
 
 .gallery {
