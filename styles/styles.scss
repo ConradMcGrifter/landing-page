@@ -49,6 +49,11 @@ p {
     background: url("../images/desktop/image-header.jpg") no-repeat center;
     background-size: cover;
 
+    @include mobileSize {
+        background: url("../images/mobile/image-header.jpg") center;
+        background-size: cover;
+    }
+
     nav {
         min-height: 100px;
         // background: white;

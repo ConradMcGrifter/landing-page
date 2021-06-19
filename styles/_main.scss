@@ -7,7 +7,7 @@
 
     @include mobileSize {
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1.5fr 1fr 1.5fr 1.5fr 1.5fr;
+        grid-template-rows: 0.5fr 0.85fr 0.5fr 0.85fr 0.85fr 0.85fr;
         grid-template-areas:
             "egg"
             "transform"
@@ -18,7 +18,7 @@
     }
 
     a {
-        margin-top: 1em;
+        margin-top: 2em;
         display: inline-block;
         text-decoration: none;
         font-family: "Fraunces";
@@ -60,11 +60,19 @@
     padding: 1em;
     @include flexCenter(column);
     .wrap {
-        max-width: 42ch;
-
+        width: 60%;
+        height: 75%;
+        // @include flexCenter(column);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        @include mobileSize {
+            align-items: center;
+            width: 85%;
+        }
         h2 {
             font-size: 4rem;
-            max-width: 20ch;
+            max-width: 16ch;
 
             @include mobileSize {
                 font-size: 3.5rem;
@@ -72,6 +80,7 @@
         }
 
         p {
+            max-width: 45ch;
             color: color(neutral-darkGrayish-blue);
 
             @include mobileSize {
@@ -117,22 +126,22 @@
     // this wraps the text for the bottom two images of the grid
     .wrap {
         padding: 0 0.5em;
-        max-width: 37ch;
+        max-width: 45ch;
         position: absolute;
         bottom: 10%;
         display: flex;
         flex-direction: column;
         h2 {
-            font-size: 2.8rem;
+            font-size: 3.2rem;
             font-weight: 900;
 
             @include mobileSize {
-                font-size: 2.2rem;
+                font-size: 2.6rem;
             }
         }
 
         p {
-            font-size: 1.8rem;
+            font-size: 2rem;
 
             @include mobileSize {
                 font-size: 1.6rem;
@@ -159,6 +168,18 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
+
+        @include mobileSize {
+            display: none;
+        }
+    }
+
+    .mobile-egg {
+        display: none;
+
+        @include mobileSize {
+            display: block;
+        }
     }
 }
 
@@ -170,6 +191,18 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
+
+        @include mobileSize {
+            display: none;
+        }
+    }
+
+    .mobile-smoothie {
+        display: none;
+
+        @include mobileSize {
+            display: block;
+        }
     }
 }
 
@@ -181,16 +214,43 @@
         height: 100%;
         object-fit: cover;
         object-position: top;
+
+        @include mobileSize {
+            display: none;
+        }
+    }
+
+    .mobile-cherry {
+        display: none;
+
+        @include mobileSize {
+            display: block;
+        }
     }
 }
 
 .photography-orange {
-    // background: url("/images/desktop/image-photography.jpg") top no-repeat;
-    // background-size: cover;
+    background: url("/images/desktop/image-photography.jpg") top no-repeat;
+    background-size: cover;
     img {
         width: 100%;
         height: 100%;
         object-fit: cover;
         object-position: top;
+
+        @include mobileSize {
+            display: none;
+        }
+    }
+
+    .mobile-orange {
+        display: none;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+
+        @include mobileSize {
+            display: block;
+        }
     }
 }

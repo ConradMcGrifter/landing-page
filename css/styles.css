@@ -7,18 +7,18 @@
   grid-auto-rows: 1fr;
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 850px) {
   .main--container {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
-    -ms-grid-rows: 1fr 1.5fr 1fr 1.5fr 1.5fr 1.5fr;
-        grid-template-rows: 1fr 1.5fr 1fr 1.5fr 1.5fr 1.5fr;
+    -ms-grid-rows: 0.5fr 0.85fr 0.5fr 0.85fr 0.85fr 0.85fr;
+        grid-template-rows: 0.5fr 0.85fr 0.5fr 0.85fr 0.85fr 0.85fr;
         grid-template-areas: "egg" "transform" "smoothie" "stand-out" "cherry" "orange";
   }
 }
 
 .main--container a {
-  margin-top: 1em;
+  margin-top: 2em;
   display: inline-block;
   text-decoration: none;
   font-family: "Fraunces";
@@ -73,16 +73,37 @@
 
 .transform-brand .wrap,
 .stand-out .wrap {
-  max-width: 42ch;
+  width: 60%;
+  height: 75%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (max-width: 850px) {
+  .transform-brand .wrap,
+  .stand-out .wrap {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 85%;
+  }
 }
 
 .transform-brand .wrap h2,
 .stand-out .wrap h2 {
   font-size: 4rem;
-  max-width: 20ch;
+  max-width: 16ch;
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 850px) {
   .transform-brand .wrap h2,
   .stand-out .wrap h2 {
     font-size: 3.5rem;
@@ -91,24 +112,25 @@
 
 .transform-brand .wrap p,
 .stand-out .wrap p {
+  max-width: 45ch;
   color: #818498;
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 850px) {
   .transform-brand .wrap p,
   .stand-out .wrap p {
     font-size: 1.6rem;
   }
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 850px) {
   .transform-brand .wrap,
   .stand-out .wrap {
     text-align: center;
   }
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 850px) {
   .egg {
     grid-area: egg;
   }
@@ -132,7 +154,7 @@
 .graphic-cherry .wrap,
 .photography-orange .wrap {
   padding: 0 0.5em;
-  max-width: 37ch;
+  max-width: 45ch;
   position: absolute;
   bottom: 10%;
   display: -webkit-box;
@@ -146,23 +168,23 @@
 
 .graphic-cherry .wrap h2,
 .photography-orange .wrap h2 {
-  font-size: 2.8rem;
+  font-size: 3.2rem;
   font-weight: 900;
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 850px) {
   .graphic-cherry .wrap h2,
   .photography-orange .wrap h2 {
-    font-size: 2.2rem;
+    font-size: 2.6rem;
   }
 }
 
 .graphic-cherry .wrap p,
 .photography-orange .wrap p {
-  font-size: 1.8rem;
+  font-size: 2rem;
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 850px) {
   .graphic-cherry .wrap p,
   .photography-orange .wrap p {
     font-size: 1.6rem;
@@ -190,11 +212,43 @@
      object-fit: cover;
 }
 
+@media screen and (max-width: 850px) {
+  .egg img {
+    display: none;
+  }
+}
+
+.egg .mobile-egg {
+  display: none;
+}
+
+@media screen and (max-width: 850px) {
+  .egg .mobile-egg {
+    display: block;
+  }
+}
+
 .smoothie img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+@media screen and (max-width: 850px) {
+  .smoothie img {
+    display: none;
+  }
+}
+
+.smoothie .mobile-smoothie {
+  display: none;
+}
+
+@media screen and (max-width: 850px) {
+  .smoothie .mobile-smoothie {
+    display: block;
+  }
 }
 
 .graphic-cherry img {
@@ -206,6 +260,27 @@
      object-position: top;
 }
 
+@media screen and (max-width: 850px) {
+  .graphic-cherry img {
+    display: none;
+  }
+}
+
+.graphic-cherry .mobile-cherry {
+  display: none;
+}
+
+@media screen and (max-width: 850px) {
+  .graphic-cherry .mobile-cherry {
+    display: block;
+  }
+}
+
+.photography-orange {
+  background: url("/images/desktop/image-photography.jpg") top no-repeat;
+  background-size: cover;
+}
+
 .photography-orange img {
   width: 100%;
   height: 100%;
@@ -213,6 +288,26 @@
      object-fit: cover;
   -o-object-position: top;
      object-position: top;
+}
+
+@media screen and (max-width: 850px) {
+  .photography-orange img {
+    display: none;
+  }
+}
+
+.photography-orange .mobile-orange {
+  display: none;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media screen and (max-width: 850px) {
+  .photography-orange .mobile-orange {
+    display: block;
+  }
 }
 
 html {
@@ -263,6 +358,13 @@ p {
   background-size: cover;
 }
 
+@media screen and (max-width: 850px) {
+  .header {
+    background: url("../images/mobile/image-header.jpg") center;
+    background-size: cover;
+  }
+}
+
 .header nav {
   min-height: 100px;
   display: -webkit-box;
@@ -284,7 +386,7 @@ p {
   width: 200px;
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 850px) {
   .header nav img {
     width: auto;
   }
@@ -294,7 +396,7 @@ p {
   display: none;
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 850px) {
   .header nav .hamburger {
     display: block;
     cursor: pointer;
@@ -311,7 +413,7 @@ p {
   list-style: none;
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 850px) {
   .header nav ul {
     display: none;
     width: 100%;
@@ -356,7 +458,7 @@ p {
   padding: 5em;
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 850px) {
   .header .intro--wrap {
     padding: 2em;
   }
@@ -369,7 +471,7 @@ p {
   font-weight: 900;
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 850px) {
   .header .intro--wrap h1 {
     font-size: 3.2rem;
     text-align: center;
