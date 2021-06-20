@@ -78,6 +78,12 @@ p {
 
         .hamburger {
             display: none;
+            opacity: 1;
+            transition: opacity 0.25s;
+
+            &.display {
+                opacity: 0.5;
+            }
 
             @include mobileSize {
                 display: block;
@@ -235,7 +241,7 @@ p {
 }
 
 .footer {
-    background: yellow;
+    background: color(footer);
 }
 
 @keyframes upDown {

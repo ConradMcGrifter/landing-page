@@ -587,6 +587,13 @@ p {
 
 .header nav .hamburger {
   display: none;
+  opacity: 1;
+  -webkit-transition: opacity 0.25s;
+  transition: opacity 0.25s;
+}
+
+.header nav .hamburger.display {
+  opacity: 0.5;
 }
 
 @media screen and (max-width: 850px) {
@@ -795,7 +802,7 @@ p {
 }
 
 .footer {
-  background: yellow;
+  background: #458c7e;
 }
 
 @-webkit-keyframes upDown {
