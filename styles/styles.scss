@@ -236,10 +236,13 @@ p {
     }
 }
 
+footer {
+}
+
 .footer {
     background: color(footer);
     padding: 2em 1em 3em 1em;
-    @include flexCenter();
+    @include flexCenter(column);
 
     @include mobileSize {
         padding: 1em 1em 4em 1em;
