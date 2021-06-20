@@ -1,4 +1,4 @@
-@import "config", "main", "testimonials";
+@import "config", "main", "testimonials", "gallery";
 
 html {
     height: 100%;
@@ -46,7 +46,7 @@ p {
 .structure-container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 95vh auto auto 600px 350px;
+    grid-template-rows: 95vh auto auto auto 350px;
 }
 
 .header {
@@ -69,7 +69,7 @@ p {
         padding: 2em;
 
         img {
-            width: 200px;
+            width: 150px;
 
             @include mobileSize {
                 width: auto;
@@ -140,6 +140,7 @@ p {
                 }
 
                 a {
+                    font-size: 1.8rem;
                     text-decoration: none;
                     color: color(white);
 
@@ -151,7 +152,7 @@ p {
                 .contact-btn {
                     color: black;
                     background: color(white);
-                    padding: 0.75em 1.25em;
+                    padding: 0.75em 1.5em;
                     border-radius: 999px;
                     font-family: "Fraunces", Arial;
                     font-weight: 700;
@@ -204,26 +205,23 @@ p {
         }
 
         h1 {
-            letter-spacing: 0.15em;
-            font-size: 6rem;
+            letter-spacing: 0.2em;
+            font-size: 5rem;
             // margin-top: 1.5em;
             color: white;
             font-weight: 900;
 
             @include mobileSize {
-                font-size: 3.2rem;
+                font-size: 4rem;
                 text-align: center;
+                letter-spacing: 0.1em;
             }
         }
 
         #arrow {
-            margin-top: 5em;
-            width: 45px;
-            animation: upDown 1.5s infinite ease-in-out alternate;
+            margin-top: 3em;
 
-            @include mobileSize {
-                width: initial;
-            }
+            animation: upDown 1.5s infinite ease-in-out alternate;
 
             &.display {
                 display: none;

@@ -42,6 +42,7 @@
             border-radius: 999px;
 
             z-index: -1;
+            transition: background 0.25s;
         }
 
         &:hover::before {
@@ -106,16 +107,16 @@
     //     grid-row: unset;
     // }
 }
-.egg,
-.smoothie,
-.graphic-cherry,
-.photography-orange {
-    // grid-row: span 2;
+// .egg,
+// .smoothie,
+// .graphic-cherry,
+// .photography-orange {
+//     // grid-row: span 2;
 
-    // @include mobileSize {
-    //     grid-row: unset;
-    // }
-}
+//     // @include mobileSize {
+//     //     grid-row: unset;
+//     // }
+// }
 
 .egg {
     @include mobileSize {
