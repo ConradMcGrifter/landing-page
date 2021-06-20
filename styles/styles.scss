@@ -1,4 +1,4 @@
-@import "config", "main";
+@import "config", "main", "testimonials";
 
 html {
     height: 100%;
@@ -46,7 +46,7 @@ p {
 .structure-container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 100vh auto 900px 600px 350px;
+    grid-template-rows: 95vh auto auto 600px 350px;
 }
 
 .header {
@@ -157,9 +157,15 @@ p {
                     font-weight: 700;
                     margin-left: 2em;
                     font-size: 1.6rem;
+                    transition: background 0.25s, color 0.25s;
                     @include mobileSize {
                         background: color(primary-Yellow);
                         margin: 0;
+                    }
+
+                    &:hover {
+                        background: rgb(135, 211, 255);
+                        color: white;
                     }
                 }
             }
@@ -191,7 +197,7 @@ p {
 
     .intro--wrap {
         @include flexCenter(column);
-        padding: 5em;
+        padding: 5em 0;
 
         @include mobileSize {
             padding: 2em;
@@ -210,50 +216,19 @@ p {
             }
         }
 
-        img {
+        #arrow {
             margin-top: 5em;
             width: 45px;
             animation: upDown 1.5s infinite ease-in-out alternate;
+
+            @include mobileSize {
+                width: initial;
+            }
 
             &.display {
                 display: none;
             }
         }
-    }
-}
-
-.testimonial--container {
-    background: color(white);
-    @include flexCenter(column);
-
-    .client-testimonials--wrap {
-        @include flexCenter(row);
-        width: 75%;
-        outline: solid black 2px;
-        text-align: center;
-        @include mobileSize {
-            flex-wrap: wrap;
-        }
-    }
-
-    .testimonial {
-        height: 100%;
-        outline: solid red 2px;
-        padding: 1em 2em;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-
-        img {
-            width: 100px;
-            height: 100px;
-            border-radius: 999px;
-        }
-    }
-
-    .testimonial__name--wrap {
-        outline: solid green 2px;
     }
 }
 

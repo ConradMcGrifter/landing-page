@@ -1,0 +1,91 @@
+.testimonial--container {
+    background: color(white);
+    padding: 12em 0;
+    @include flexCenter(column);
+
+    @include mobileSize {
+        padding: 3em 0;
+    }
+
+    .client-testimonials-header {
+        h2 {
+            color: color(neutral-grayish-blue);
+            font-size: 2.4rem;
+            letter-spacing: 0.25em;
+            margin-bottom: 4em;
+
+            @include mobileSize {
+                font-size: 1.6rem;
+            }
+        }
+    }
+
+    .client-testimonials--wrap {
+        @include flexCenter(row);
+        width: 85%;
+        // outline: solid black 2px;
+        text-align: center;
+        @include mobileSize {
+            flex-wrap: wrap;
+            width: 100%;
+        }
+    }
+
+    .testimonial {
+        height: 100%;
+        // width: 100%;
+        // outline: solid red 2px;
+        padding: 1em 2em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        @include mobileSize {
+            height: auto;
+            width: 100%;
+            padding: 1em 0;
+            margin-bottom: 2em;
+        }
+
+        p {
+            max-width: 33ch;
+            color: color(neutral-veryDarkGrayish-blue);
+
+            @include mobileSize {
+                max-width: 32ch;
+            }
+        }
+
+        img {
+            width: 75px;
+            height: 75px;
+            border-radius: 999px;
+            margin-bottom: 3em;
+
+            @include mobileSize {
+                margin-bottom: 1.5em;
+                // width: 50px;
+                // height: 50px;
+            }
+        }
+    }
+
+    .testimonial__name--wrap {
+        // outline: solid green 2px;
+        margin-top: 3em;
+
+        @include mobileSize {
+            margin-top: 1.5em;
+        }
+
+        h3 {
+            margin: 0;
+            font-size: 1.6rem;
+        }
+
+        small {
+            font-size: 1.4rem;
+            color: color(neutral-grayish-blue);
+        }
+    }
+}

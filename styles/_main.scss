@@ -17,7 +17,8 @@
             "orange";
     }
 
-    a {
+    .a__link,
+    .d__link {
         margin-top: 2em;
         display: inline-block;
         text-decoration: none;
@@ -32,7 +33,7 @@
         &::before {
             content: "";
             position: absolute;
-            bottom: -2px;
+            bottom: -3px;
             left: -7px;
             width: 110%;
             height: 12px;
@@ -46,6 +47,14 @@
         &:hover::before {
             background: color(primary-Yellow);
         }
+    }
+
+    .d__link::before {
+        background: hsla(7, 99%, 70%, 0.37);
+    }
+
+    .d__link:hover::before {
+        background: hsl(7, 99%, 70%);
     }
 
     img {
