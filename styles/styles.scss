@@ -100,7 +100,7 @@ p {
             }
         }
 
-        ul {
+        #navUl {
             display: flex;
 
             @include mobileSize {
@@ -236,12 +236,93 @@ p {
     }
 }
 
-.gallery {
-    background: orange;
-}
-
 .footer {
     background: color(footer);
+    padding: 2em 1em 3em 1em;
+    @include flexCenter();
+
+    @include mobileSize {
+        padding: 1em 1em 4em 1em;
+    }
+
+    // this is a class on the middle link that pushes the other two links away
+    .margin {
+        margin: 0 2em;
+    }
+
+    .footer--wrap {
+        // outline: solid red 5px;
+        width: 100%;
+        height: 100%;
+        @include flexCenter(column);
+        justify-content: space-between;
+
+        .top {
+            // outline: solid green 2px;
+            text-align: center;
+            width: 40;
+            height: 50%;
+            @include flexCenter(column);
+            justify-content: flex-end;
+
+            @include mobileSize {
+                justify-content: center;
+            }
+
+            img {
+                margin-bottom: 1.5em;
+                opacity: 0.75;
+            }
+        }
+
+        // .bottom {
+        //     outline: solid pink 2px;
+        // }
+
+        .footer-links {
+            display: flex;
+            li {
+                list-style-type: none;
+
+                a {
+                    text-decoration: none;
+                    color: color(graphicDesignText);
+                    opacity: 0.75;
+                    transition: opacity 0.25s;
+
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+
+                img {
+                    display: block;
+                }
+            }
+        }
+
+        .social-links {
+            // margin-top: 3em;
+            display: flex;
+
+            li {
+                list-style-type: none;
+
+                & + li {
+                    margin-left: 1.5em;
+                }
+
+                img {
+                    opacity: 0.75;
+                    transition: opacity 0.25s;
+
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @keyframes upDown {
