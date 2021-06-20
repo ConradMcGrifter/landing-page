@@ -879,6 +879,7 @@ p {
 .footer .footer--wrap .top img {
   margin-bottom: 1.5em;
   opacity: 0.75;
+  width: 150px;
 }
 
 .footer .footer--wrap .footer-links {
@@ -894,7 +895,7 @@ p {
 .footer .footer--wrap .footer-links li a {
   text-decoration: none;
   color: #25564b;
-  opacity: 0.75;
+  opacity: 0.5;
   -webkit-transition: opacity 0.25s;
   transition: opacity 0.25s;
 }
